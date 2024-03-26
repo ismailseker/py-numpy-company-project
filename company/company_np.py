@@ -1,5 +1,5 @@
 import numpy as np
-
+from operationClass import IntArray
 def fileHandling():
 
     lines = []
@@ -17,5 +17,9 @@ def main():
     data_frame = fileHandling()
 
     print(data_frame)
+
+    firstBranch = IntArray(data_frame[0])
+    firstBranch.display()
+    firstBranch.salary()
 
 main()
