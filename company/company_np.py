@@ -26,6 +26,14 @@ def min_product(data_frame):
             sumProducts = result
             worstCompany = i + 1
     return print(f'The worst company is the {worstCompany} with {sumProducts}')
+
+def mean_product(data_frame):
+
+    for i in range(len(data_frame)):
+        average = np.mean(data_frame[i])
+        print(f'On average, one employee from {i} company produced {average} products')
+
+     
 def fileHandling():
 
     lines = []
@@ -45,9 +53,10 @@ def main():
     print(data_frame)
 
     firstBranch = IntArray(data_frame[0])
-    # firstBranch.display()
-    # firstBranch.salary()
-    # firstBranch.showData()
+    firstBranch.display()
+    firstBranch.salary()
+    firstBranch.showData()
     min_product(data_frame)
     max_product(data_frame)
+    mean_product(data_frame)
 main()
